@@ -11,6 +11,9 @@ import reset from 'styled-reset'
     box-sizing: border-box;
   }
 
+  body {
+    background: goldenrod;
+  }
 `
 
 export default GlobalStyle
