@@ -7,6 +7,9 @@ const CanvasStyle = styled.canvas`
   margin-left: 13px;
   margin-right: 13px;
   border-radius: 10px;
+  div {
+    background: black;
+  }
 `
 
 export default function Canvas() {
@@ -48,5 +51,9 @@ export default function Canvas() {
   })
   
   
-  return <CanvasStyle ref={canvasRef}/>
+  return (
+    <CanvasStyle ref={canvasRef}>
+      <div></div>
+    </CanvasStyle>
+  )
 }
