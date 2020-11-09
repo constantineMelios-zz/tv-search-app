@@ -1,6 +1,6 @@
 import React from 'react'
 import BurgerMenu from './components/BurgerMenu'
-import Test from './components/Test'
+import Home from './pages/Home'
 import GlobalStyle from './styles/GlobalStyle'
 
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <GlobalStyle />
       <BurgerMenu />
-      <Test />
+      <Home />
     </>
   )
 

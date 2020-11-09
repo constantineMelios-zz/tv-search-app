@@ -11,8 +11,17 @@ import reset from 'styled-reset'
     box-sizing: border-box;
   }
 
+  :root {
+    --white: #EEFBFB;
+    --light: #007CC7;
+    --lighter: #4DA8DA;
+    --dark: #12232E;
+    --darker: #203647;
+  }
+
   body {
-    background: goldenrod;
+    background: var(-white);
+    overflow: hidden;
   }
 `
 

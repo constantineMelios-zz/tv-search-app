@@ -1,8 +1,6 @@
 import React, {useRef} from 'react'
 import styled from 'styled-components'
 
-
-
 const BurgerStyle = styled.div`
   cursor: pointer;
   position: absolute;
@@ -11,7 +9,7 @@ const BurgerStyle = styled.div`
   width: 100px;
   height: 100px;
   padding: 25px;
-  background: #ffffff;
+  background: var(--light);
   border-bottom-right-radius: 100%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
   transition: width 0.25s ease-out, height 0.25s ease-out, border-bottom-right-radius 0.4s ;
@@ -21,7 +19,7 @@ const BurgerStyle = styled.div`
   .burger__bottom {
     width: 22px;
     height: 3px;
-    background: black;
+    background: var(--white);
     transition: transform 0.25s ease-out;
   }
   .burger__middle,
