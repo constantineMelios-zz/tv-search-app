@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
 
 const BurgerStyle = styled.div`
@@ -70,10 +70,12 @@ const BurgerStyle = styled.div`
 `
 
 export default function BurgerMenu() {
-  const burger = useRef(null)
+  const burger = useRef<HTMLDivElement>(null)
 
   function toggleMenu() {
-   burger.current.classList.toggle("active")
+    if (burger.current !== null) {
+      burger.current.classList.toggle("active")
+    }
   }
 
   return (
