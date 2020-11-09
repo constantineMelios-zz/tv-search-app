@@ -39,6 +39,7 @@ const BurgerStyle = styled.div`
     position: absolute;
     top: 25%;
     left: 25%;
+    display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
     .menu__list {
@@ -55,6 +56,7 @@ const BurgerStyle = styled.div`
     height: 100vh;
     border-bottom-right-radius: 0%;
     .menu {
+      display: block;
       opacity: 1;
     }
     .burger__top {
