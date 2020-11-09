@@ -1,8 +1,17 @@
 import React from 'react'
+import BurgerMenu from './components/BurgerMenu'
+import GlobalStyle from './styles/GlobalStyle'
 
 
 function App() {
-  return <h1>Hello World</h1>
+  return (
+    <>
+      <GlobalStyle />
+      <BurgerMenu />
+    </>
+  )
+
+
 }
 
 export default App
