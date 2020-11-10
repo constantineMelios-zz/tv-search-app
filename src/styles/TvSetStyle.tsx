@@ -1,19 +1,47 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const attentionAnimation = keyframes`
+  28% {transform: rotate(0)}
+  30% {transform: rotate(-5deg)}
+  32% {transform: rotate(5deg)}
+  34% {transform: rotate(0)}
+`
+
+const entranceAnimation = keyframes`
+  0% {transform: translateX(170%)}
+  100% {transform: translateX(0)}
+`
 
 const TvSetStyle = styled.a`
-  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.26));
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.56));
   transition: transform 0.2s ease;
   position: relative;
-  :hover {
-    transform: scale(1.05)
+  min-width: 380px;
+  max-width: 80vw;
+  animation: ${attentionAnimation} 4s infinite, ${entranceAnimation} 1s 1;
+  :hover,
+  :active {
+    transform: scale(1.02)
   }
   p {
-    font-size: 2rem;
+    width: 290px; //canvas width
+    text-align: center;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: var(--boldFont);
     position: absolute;
-    top: 50%;
-    left: 15%;
+    top: calc(50%);
+    left: 10px;
+    opacity: 0.9;
+    transition: color 0.25s ease;
     z-index: 1;
   }
+  :hover p,
+  :active p {
+    color: var(--lighter);
+  }
 `
+
+
 
 export default TvSetStyle

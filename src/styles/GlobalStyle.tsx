@@ -17,11 +17,14 @@ const GlobalStyle = createGlobalStyle`
     --lighter: #4DA8DA;
     --dark: #12232E;
     --darker: #203647;
+    --lightFont: 300;
+    --regularFont: 400;
+    --boldFont: 700;
   }
 
   body {
     font-family: 'Open Sans', sans-serif;
-    background: var(-white);
+    background: var(--dark);
     overflow: hidden;
   }
 `

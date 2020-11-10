@@ -6,7 +6,7 @@ import Canvas from './Canvas'
 export default function TvSet(props) {
   return (
     <TvSetStyle href="#">
-      <p>Change the channel</p>
+      <p>Discover them here</p>
       <svg viewBox="0 0 464.56 482.45" {...props}>
         <defs>
           <linearGradient
@@ -247,7 +247,7 @@ export default function TvSet(props) {
           </radialGradient>
           <style>
             {
-              ".prefix__cls-3,.prefix__cls-7{fill:#6d6d6d}.prefix__cls-7{opacity:.4}.prefix__cls-9{fill:#203647}.prefix__cls-10{fill:#4da8da}.prefix__cls-14{fill:#191514}.prefix__cls-23{fill:#141615;opacity:.2}"
+              ".prefix__cls-3,.prefix__cls-7{fill:#6d6d6d}.prefix__cls-7{opacity:.4}.prefix__cls-9{fill:#203647}.prefix__cls-10{fill:#12232E}.prefix__cls-14{fill:#191514}.prefix__cls-23{fill:#141615;opacity:.2}"
             }
           </style>
         </defs>

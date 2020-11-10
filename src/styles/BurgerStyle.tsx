@@ -1,18 +1,27 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const entranceAnimation = keyframes`
+  0% {transform: translateX(-100%) translateY(-100%)}
+  100% {transform: translateX(0) translateY(0)}
+`
 
 const BurgerStyle = styled.div`
   cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100px;
-  height: 100px;
-  padding: 25px;
+  width: 60px;
+  height: 60px;
+  padding: 12px;
   background: var(--light);
   border-bottom-right-radius: 100%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-  transition: width 0.25s ease-out, height 0.25s ease-out, border-bottom-right-radius 0.4s ;
+  transition: width 0.25s ease-out, height 0.25s ease-out, border-bottom-right-radius 0.4s, box-shadow 0.25s ease;
+  animation: ${entranceAnimation} 1s 1;
   z-index: 1;
+  :hover {
+    box-shadow: none;
+  }
   .burger__top,
   .burger__middle,
   .burger__bottom {
