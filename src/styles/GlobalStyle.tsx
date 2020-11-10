@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
 
 
- const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   ${reset}
 
   *,
@@ -20,6 +20,7 @@ import reset from 'styled-reset'
   }
 
   body {
+    font-family: 'Open Sans', sans-serif;
     background: var(-white);
     overflow: hidden;
   }

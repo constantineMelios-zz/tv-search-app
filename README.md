@@ -7,4 +7,6 @@
 - react icons
 - styled reset
 
-I chose to do a Star Wars Film Order site
+I chose to do a TV series search app
+
+Home page: canvas on SVG

@@ -1,7 +1,8 @@
 import React from 'react'
-import BurgerMenu from './components/BurgerMenu'
-import Home from './pages/Home'
-import GlobalStyle from './styles/GlobalStyle'
+import { BurgerMenu } from './components'
+import { Home } from './pages'
+import { GlobalStyle } from './styles'
+
 
 
 function App() {

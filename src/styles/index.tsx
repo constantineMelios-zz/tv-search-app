@@ -1,0 +1,5 @@
+export { default as GlobalStyle } from './GlobalStyle'
+export { default as BurgerStyle } from './BurgerStyle'
+export { default as CanvasStyle } from './CanvasStyle'
+export { default as TvSetStyle } from './TvSetStyle'
+export { default as HomeStyle } from './HomeStyle'

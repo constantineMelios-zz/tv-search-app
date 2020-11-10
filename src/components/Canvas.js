@@ -1,9 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
-
-const CanvasStyle = styled.canvas`
-  border-radius: 20px;
-`
+import { CanvasStyle } from '../styles';
 
 export default function Canvas() {
   const canvasRef = useRef(null)
