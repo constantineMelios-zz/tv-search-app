@@ -8,11 +8,11 @@ const attentionAnimation = keyframes`
 `
 
 const entranceAnimation = keyframes`
-  0% {transform: translateX(170%)}
-  100% {transform: translateX(0)}
+  0% {transform: translateX(170%) translateY(100%)}
+  100% {transform: translateX(0) translateY(0)}
 `
 
-const TvSetStyle = styled.a`
+const TvSetStyle = styled.div`
   filter: drop-shadow(0 3px 6px rgba(0,0,0,0.56));
   transition: transform 0.2s ease;
   position: relative;
@@ -24,15 +24,16 @@ const TvSetStyle = styled.a`
     transform: scale(1.02)
   }
   p {
-    width: 290px; //canvas width
+    /* width: 290px; //canvas width */
+    width: min-content;
     text-align: center;
     color: var(--white);
-    font-size: 1.4rem;
+    font-size: 3rem;
     font-weight: var(--boldFont);
     position: absolute;
-    top: calc(50%);
-    left: 10px;
-    opacity: 0.9;
+    top: 35%;
+    left: 20%;
+    opacity: 0.85;
     transition: color 0.25s ease;
     z-index: 1;
   }

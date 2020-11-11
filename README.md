@@ -6,6 +6,8 @@
 - Redux
 - react icons
 - styled reset
+- react router
+- react-transition-group
 
 I chose to do a TV series search app
 

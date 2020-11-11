@@ -1,6 +1,7 @@
 import React from 'react'
-import { BurgerMenu } from './components'
-import { Home } from './pages'
+import { Route, Switch } from 'react-router-dom'
+import { BurgerMenu, Footer } from './components'
+import { Discover, Home } from './pages'
 import { GlobalStyle } from './styles'
 
 
@@ -10,7 +11,15 @@ function App() {
     <>
       <GlobalStyle />
       <BurgerMenu />
-      <Home />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/discover">
+          <Discover />
+          <Footer />
+        </Route>
+      </Switch>
     </>
   )
 

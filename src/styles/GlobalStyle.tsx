@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Open Sans', sans-serif;
     background: var(--dark);
-    overflow: hidden;
+    overflow-x: hidden;
   }
 `
 
