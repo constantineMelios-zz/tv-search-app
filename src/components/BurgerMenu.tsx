@@ -2,9 +2,8 @@ import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { BurgerStyle } from '../styles'
 import LanguageSelector from './LanguageSelector'
-import { RiHomeFill, RiCompassDiscoverFill } from "react-icons/ri";
+import { RiHomeFill, RiCompassDiscoverFill, RiMailFill } from "react-icons/ri";
 import { RootStateOrAny, useSelector } from 'react-redux';
-import languageReducer from '../redux/language';
 
 
 export default function BurgerMenu() {
@@ -26,6 +25,7 @@ export default function BurgerMenu() {
         <ul className='menu__list'>
           <li><Link to="/"><RiHomeFill />{language === 'en' ? 'Home' : 'Αρχική'}</Link></li>
           <li><Link to="/discover"><RiCompassDiscoverFill />{language === 'en' ? 'Discover' : 'Ανακάλυψε'}</Link></li>
+          <li><Link to="/contact"><RiMailFill />{language === 'en' ? 'Contact Us' : 'Επικοινωνία'}</Link></li>
           <li><LanguageSelector /></li>
         </ul>
       </nav>

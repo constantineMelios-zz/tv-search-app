@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { BurgerMenu, Footer } from './components'
-import { Discover, Home } from './pages'
+import { ContactUs, Discover, Home } from './pages'
 import { GlobalStyle } from './styles'
 
 
@@ -17,6 +17,10 @@ function App() {
         </Route>
         <Route path="/discover">
           <Discover />
+          <Footer />
+        </Route>
+        <Route path="/contact">
+          <ContactUs />
           <Footer />
         </Route>
       </Switch>

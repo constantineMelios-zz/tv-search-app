@@ -1,12 +1,11 @@
 import React from 'react'
 import { ApiKey } from '../ApiKey'
-import { LanguageSelector } from '../components'
-import store from '../redux'
+import { DiscoverStyle } from '../styles'
 
 
 export default function Discover() {
 
-  return <>
+  return <DiscoverStyle>
 
-  </>
+  </DiscoverStyle>
 }
