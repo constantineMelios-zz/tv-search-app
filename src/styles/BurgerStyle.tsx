@@ -5,6 +5,21 @@ const entranceAnimation = keyframes`
   100% {transform: translateX(0) translateY(0)}
 `
 
+const underlineAnimation = keyframes`
+  0% {width: 0%;}
+  100% {width: 100%;}
+`
+
+const linkAnimation = keyframes`
+  0% {margin-left: -1em;}
+  100% {margin-left: 0;}
+`
+
+const iconAnimation = keyframes`
+  0% {opacity: 0; transform: translateX(50%)}
+  100% {opacity: 1; transform: translateX(0)}
+`
+
 const BurgerStyle = styled.div`
   cursor: pointer;
   position: absolute;
@@ -73,6 +88,47 @@ const BurgerStyle = styled.div`
     }
     .burger__bottom {
       transform: rotate(-45deg);
+    }
+  }
+  nav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    a {
+      padding: 0.15em;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      font-weight: var(--boldFont);
+      font-size: 2rem;
+      text-decoration: none;
+      transition: text-decoration 0.25s ease, margin-left 0.25s ease;
+      position: relative;
+      margin-left: -1em;
+      svg {
+        margin-right: 0.2em;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+      :after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: var(--white);
+      }
+      :hover,
+      :active {
+        animation: ${linkAnimation} 0.5s forwards;
+        svg {
+          animation: ${iconAnimation} 0.5s forwards;
+        }
+        :after {
+          animation: ${underlineAnimation} 0.5s forwards;
+        }
+      }
     }
   }
 `

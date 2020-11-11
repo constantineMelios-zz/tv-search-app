@@ -1,26 +1,25 @@
 import React from 'react'
 import { useSelector, useDispatch, RootStateOrAny } from 'react-redux'
 import { greek, english } from '../redux/language'
-import styled from 'styled-components'
-
-
-const LangStyle = styled.div`
-  margin: 5em;
-`
+import { LanguageStyle } from '../styles'
+import el from '../assets/el.png'
+import en from '../assets/en.png'
 
 export default function LanguageSelector() {
   const language = useSelector((state: RootStateOrAny) => state.language)
   const dispatch = useDispatch()
 
+  function handleClick() {
+    if (language === 'en') {
+      dispatch(greek())
+    } else {
+      dispatch(english())
+    }
+  }
+
   return (
-    <LangStyle>
-      <h1>{language}</h1>
-      <button type="button" onClick={() => dispatch(greek())}>
-        Greek
-      </button>
-      <button type="button" onClick={() => dispatch(english())}>
-        English
-      </button>
-    </LangStyle>
+    <LanguageStyle type='button' onClick={handleClick} aria-label={language === 'en' ? "Change language" : "Άλλαξε Γλώσσα"}>
+      <img src={language === 'en' ? el : en} alt='change language' />
+    </LanguageStyle>
   )
 }

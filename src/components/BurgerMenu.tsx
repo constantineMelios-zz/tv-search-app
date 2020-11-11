@@ -1,9 +1,15 @@
 import React, { useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { BurgerStyle } from '../styles'
+import LanguageSelector from './LanguageSelector'
+import { RiHomeFill, RiCompassDiscoverFill } from "react-icons/ri";
+import { RootStateOrAny, useSelector } from 'react-redux';
+import languageReducer from '../redux/language';
 
 
 export default function BurgerMenu() {
   const burger = useRef<HTMLDivElement>(null)
+  const language = useSelector((state: RootStateOrAny) => state.language)
 
   function toggleMenu() {
     if (burger.current !== null) {
@@ -16,13 +22,13 @@ export default function BurgerMenu() {
       <div className="burger__top"></div>
       <div className="burger__middle"></div>
       <div className="burger__bottom"></div>
-      <div className="menu">
+      <nav className="menu">
         <ul className='menu__list'>
-          <li>Ada</li>
-          <li>Anastasis</li>
-          <li>Constantine</li>
+          <li><Link to="/"><RiHomeFill />{language === 'en' ? 'Home' : 'Αρχική'}</Link></li>
+          <li><Link to="/discover"><RiCompassDiscoverFill />{language === 'en' ? 'Discover' : 'Ανακάλυψε'}</Link></li>
+          <li><LanguageSelector /></li>
         </ul>
-      </div>
+      </nav>
     </BurgerStyle>
   )
 }

@@ -1,14 +1,23 @@
 import React from 'react'
+import { RootStateOrAny, useSelector } from 'react-redux'
 import { TvSet } from '../components'
 import { HomeStyle } from '../styles'
 
 export default function Home() {
+  const language = useSelector((state: RootStateOrAny) => state.language)
+
   return (
     <HomeStyle>
       <div className="main__content">
         <div className="main__titles">
-          <h1 className="main__title">Find your next TV serie</h1>
-          <p className="main__subtitle">Choose among the most popular or trending TV series right now. Discover shows you missed. Search your favorite actors and more.</p>
+          <h1 className="main__title">{language === 'en' ?
+            "Find your next TV serie" :
+            "Βρες τη νέα αγαπημένη σου σειρά"}
+          </h1>
+          <p className="main__subtitle">{language === 'en' ?
+            "Choose among the most popular or trending TV series right now. Discover shows you missed and more." :
+            "Επίλεξε ανάμεσα στις πιο δημοφιλείς τηλεοπτικές σειρές. Ανακάλυψε σειρές που δεν πρόλαβες και άλλα"}
+          </p>
         </div>
         <TvSet className="main__svg" />
       </div>

@@ -47,6 +47,7 @@ const HomeStyle = styled.main`
       animation: ${textAnimation} 1s 1;
     }
     .main__subtitle {
+      margin-top: 0.5em;
       font-size: 1.25rem;
       font-weight: var(--lightFont);
       line-height: 1.15em;

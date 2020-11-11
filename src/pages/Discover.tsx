@@ -7,6 +7,6 @@ import store from '../redux'
 export default function Discover() {
 
   return <>
-    <LanguageSelector />
+
   </>
 }
