@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const entranceAnimation = keyframes`
   0% {opacity: 0}

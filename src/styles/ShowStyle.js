@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const entranceAnimation = keyframes`
   30% {transform: translateX(30%) translateY(15%); opacity: 0;}
@@ -18,9 +18,9 @@ const ShowStyle = styled.div`
   justify-items: center;
   align-items: center;
   grid-template-areas:
-    "img title title"
-    "img desc desc"
-    "img . votes";
+    'img title title'
+    'img desc desc'
+    'img . votes';
   transition: width 0.25s ease;
   animation: ${entranceAnimation} 0.5s 1;
   @media (max-width: 650px){

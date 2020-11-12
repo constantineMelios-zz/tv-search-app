@@ -19,7 +19,7 @@ export default function LanguageSelector() {
   }
 
   return (
-    <LanguageStyle type='button' onClick={handleClick} aria-label={TextSelector("Change language", "Άλλαξε Γλώσσα", language)}>
+    <LanguageStyle type='button' onClick={handleClick} aria-label={TextSelector('Change language', 'Άλλαξε Γλώσσα', language)}>
       <img src={language === 'en-US' ? el : en} alt='change language' />
     </LanguageStyle>
   )

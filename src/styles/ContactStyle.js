@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 import background from '../assets/background.svg'
 
 const bgEntranceAnimation = keyframes`

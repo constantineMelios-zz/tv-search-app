@@ -35,7 +35,7 @@ export default function Canvas() {
 
   useEffect(() => {
     const canvas = canvasRef.current
-    const context = canvas.getContext("gl") || canvas.getContext("2d")
+    const context = canvas.getContext('gl') || canvas.getContext('2d')
     const scaleFactor = 2.5
     const samples = []
     let sampleIndex = 0
@@ -67,7 +67,7 @@ export default function Canvas() {
 
       context.fillStyle = grd;
       context.fillRect(0, scanOffsetY, canvas.width, scanSize + scanOffsetY);
-      context.globalCompositeOperation = "lighter";
+      context.globalCompositeOperation = 'lighter';
 
       scanOffsetY += (canvas.height / scanSpeed);
       if (scanOffsetY > canvas.height) scanOffsetY = -(scanSize / 2);

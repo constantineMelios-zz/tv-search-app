@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const entranceAnimation = keyframes`
   0% {transform: translateX(100%); opacity: 0;}
@@ -46,7 +46,7 @@ const SortByStyle = styled.form`
     .sort__radio {
       position: relative;
       :before {
-        content: "";
+        content: '';
         width: 14px;
         height: 14px;
         position: absolute;
@@ -61,7 +61,7 @@ const SortByStyle = styled.form`
       &:checked {
         opacity: 1;
         :after {
-          content: "";
+          content: '';
           width: 10px;
           height: 10px;
           position: absolute;

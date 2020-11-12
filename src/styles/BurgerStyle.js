@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const entranceAnimation = keyframes`
   0% {transform: translateX(-100%) translateY(-100%)}
@@ -112,7 +112,7 @@ const BurgerStyle = styled.div`
         transition: opacity 0.25s ease;
       }
       :after {
-        content: "";
+        content: '';
         position: absolute;
         bottom: 0;
         left: 0;

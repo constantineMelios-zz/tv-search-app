@@ -12,13 +12,13 @@ function App() {
       <GlobalStyle />
       <BurgerMenu />
       <Switch>
-        <Route exact path="/">
+        <Route exact path='/'>
           <Home />
         </Route>
-        <Route path="/discover">
+        <Route path='/discover'>
           <Discover />
         </Route>
-        <Route path="/contact">
+        <Route path='/contact'>
           <ContactUs />
         </Route>
       </Switch>
