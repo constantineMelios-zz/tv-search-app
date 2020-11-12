@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { RootStateOrAny, useSelector } from 'react-redux'
 import { ContactStyle } from '../styles'
 import letter from '../assets/letter.svg'
@@ -28,6 +28,7 @@ export default function ContactUs() {
     }, 250)
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function validationMessage() {
     setValidation(() => {
       if (language === 'en') {
@@ -36,11 +37,6 @@ export default function ContactUs() {
       return "To μήνυμα σας στάλθηκε με επιτυχία! Θέλετε να μας πείτε κάτι ακόμα;"
     })
   }
-
-  useEffect(() => {
-    validationMessage()
-    return () => console.log('unmounting')
-  }, [language])
 
   return (
     <ContactStyle>
