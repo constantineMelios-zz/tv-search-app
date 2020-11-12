@@ -7,6 +7,15 @@ const DiscoverStyle = styled.section`
   align-items: center;
   justify-content: space-around;
   color: var(--white);
+  padding: 2em;
+  padding-bottom: 5em;
+  .discover__title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: var(--boldFont);
+    padding: 1em 0;
+  }
 `
 
 export default DiscoverStyle

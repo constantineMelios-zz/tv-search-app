@@ -36,7 +36,7 @@ function sortByReducer(sortBy = initialSortBy, action) {
 
     case "BY_DATE":
       return {
-        url: "first_air_date.asc",
+        url: "first_air_date.desc",
         type: "date"
       }
     default:
