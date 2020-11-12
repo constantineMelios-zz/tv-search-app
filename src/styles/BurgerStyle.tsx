@@ -22,7 +22,7 @@ const iconAnimation = keyframes`
 
 const BurgerStyle = styled.div`
   cursor: pointer;
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 60px;
@@ -121,12 +121,12 @@ const BurgerStyle = styled.div`
       }
       :hover,
       :active {
-        animation: ${linkAnimation} 0.5s forwards;
+        animation: ${linkAnimation} 0.25s forwards;
         svg {
-          animation: ${iconAnimation} 0.5s forwards;
+          animation: ${iconAnimation} 0.25s forwards;
         }
         :after {
-          animation: ${underlineAnimation} 0.5s forwards;
+          animation: ${underlineAnimation} 0.25s forwards;
         }
       }
     }

@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const entranceAnimation = keyframes`
+  30% {transform: translateX(30%) translateY(15%); opacity: 0;}
+  100% {transform: translateX(0) translateY(0); opacity: 1;}
+`
 
 const ShowStyle = styled.div`
   margin: 0.5em;
@@ -17,6 +22,7 @@ const ShowStyle = styled.div`
     "img desc desc"
     "img . votes";
   transition: width 0.25s ease;
+  animation: ${entranceAnimation} 0.5s 1;
   @media (max-width: 650px){
     width: 150px;
   }

@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const entranceAnimation = keyframes`
+  0% {opacity: 0}
+  100% {opacity: 100%}
+`
 
 const DiscoverStyle = styled.section`
   min-height: 100vh;
@@ -15,6 +20,7 @@ const DiscoverStyle = styled.section`
     font-size: 2.5rem;
     font-weight: var(--boldFont);
     padding: 1em 0;
+    animation: ${entranceAnimation} 0.5s 1;
   }
 `
 

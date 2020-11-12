@@ -1,7 +1,12 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const entranceAnimation = keyframes`
+  0% {transform: translateX(100%); opacity: 0;}
+  100% {transform: translateX(0); opacity: 1;}
+`
 
 const SortByStyle = styled.form`
-  max-width: 800px;
+  max-width: 700px;
   width: 90vw;
   margin: auto;
   padding: 1em;
@@ -12,6 +17,7 @@ const SortByStyle = styled.form`
   justify-content: center;
   border-radius: 2em;
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  animation: ${entranceAnimation} 0.5s 1;
   .sort__title {
     font-size: 1.5rem;
     padding: 0.5em 0;
@@ -41,8 +47,8 @@ const SortByStyle = styled.form`
       position: relative;
       :before {
         content: "";
-        width: 13px;
-        height: 13px;
+        width: 14px;
+        height: 14px;
         position: absolute;
         left: 0;
         top: 0;
@@ -50,12 +56,23 @@ const SortByStyle = styled.form`
         border: 1px solid var(--white);
         border-radius: 100%;
         transition: background 0.25s ease;
+        
       }
       &:checked {
         opacity: 1;
-        :before {
+        :after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 2px;
+          top: 2px;
           background: var(--dark);
+          border-radius: 100%;
           opacity: 1;
+        }
+        :before {
+          border: 3px solid var(--white);
         }
       }
     }  
