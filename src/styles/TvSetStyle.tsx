@@ -16,7 +16,7 @@ const TvSetStyle = styled.div`
   filter: drop-shadow(0 3px 6px rgba(0,0,0,0.56));
   transition: transform 0.2s ease;
   position: relative;
-  min-width: 380px;
+  min-width: 360px;
   max-width: 80vw;
   animation: ${attentionAnimation} 4s infinite, ${entranceAnimation} 1s 1;
   :hover,

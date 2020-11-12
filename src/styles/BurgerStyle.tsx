@@ -96,7 +96,7 @@ const BurgerStyle = styled.div`
     align-items: center;
     justify-content: space-evenly;
     a {
-      padding: 0.15em;
+      padding: 0.15em 0;
       display: flex;
       align-items: center;
       color: var(--white);
