@@ -11,7 +11,7 @@ export default function Home() {
       <div className="main__content">
         <div className="main__titles">
           <h1 className="main__title">{language === 'en' ?
-            "Find your next TV serie" :
+            "Find your next favorite TV show" :
             "Βρες τη νέα αγαπημένη σου σειρά"}
           </h1>
           <p className="main__subtitle">{language === 'en' ?
