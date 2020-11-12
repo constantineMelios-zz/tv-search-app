@@ -51,7 +51,6 @@ const ContactStyle = styled.section`
     .contact__validation {
       text-align: center;
       font-size: 1rem;
-      font-weight: var(--lightFont);
       color: #5C946E;
       padding: 0.15em;
       min-height: 2em;
@@ -69,7 +68,7 @@ const ContactStyle = styled.section`
         border-bottom: 1px solid var(--light);
         margin: 0.5em 0;
         font-size: 1.25rem;
-        color: var(--light);
+        color: var(--dark);
         ::placeholder {
           font-size: 1rem;
           color: var(--light);
@@ -88,7 +87,7 @@ const ContactStyle = styled.section`
       input:-webkit-autofill:focus,
       input:-webkit-autofill:active {
         transition: background-color 5000s ease-in-out 0s;
-        -webkit-text-fill-color: var(--light);
+        -webkit-text-fill-color: var(--dark);
       }
       textarea {
         background: none;
@@ -98,7 +97,7 @@ const ContactStyle = styled.section`
         border: 1px solid var(--light);
         margin: 0.5em 0;
         font-size: 1.25rem;
-        color: var(--light);
+        color: var(--dark);
         resize: vertical;
         ::placeholder {
           font-size: 1rem;

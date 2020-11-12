@@ -11,7 +11,7 @@ export default function Canvas() {
 
     const intensityCurve = [];
     for (let i = 0; i < Math.floor(h / factor) + factor; i++)
-      intensityCurve.push(Math.floor(Math.random() * 15));
+      intensityCurve.push(Math.floor(Math.random() * 15))
 
     for (let i = 0; i < h; i++) {
       const value = interpolate((i / factor), Math.floor(i / factor), intensityCurve[Math.floor(i / factor)], Math.floor(i / factor) + 1, intensityCurve[Math.floor(i / factor) + 1]);
@@ -22,7 +22,6 @@ export default function Canvas() {
     for (let i = 0; i < (w * h); i++) {
       const k = i * 4;
       let color = Math.floor(36 * Math.random());
-      // Optional: add an intensity curve to try to simulate scan lines
       color += intensity[Math.floor(i / w)];
       imageData.data[k] = imageData.data[k + 1] = imageData.data[k + 2] = color;
       imageData.data[k + 3] = Math.round(255 * trans);
@@ -80,8 +79,7 @@ export default function Canvas() {
 
 
   return (
-    <CanvasStyle ref={canvasRef}>
-      NO SIGNAL
+    <CanvasStyle ref={canvasRef} width={290} height={230}>
     </CanvasStyle>
   )
 }

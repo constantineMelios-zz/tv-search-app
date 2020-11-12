@@ -48,7 +48,7 @@ function formReducer(formState = initialFormState, action) {
     case "MESSAGE":
       return { ...formState, message: action.data }
     case "SET_VALIDATION":
-      if (action.data === "en") {
+      if (action.data === "en-US") {
         return { ...formState, validation: "Your message sent succesfully! Anything else to add?" }
       } else {
         return { ...formState, validation: "To μήνυμα σας στάλθηκε με επιτυχία! Θέλετε να μας πείτε κάτι ακόμα;" }

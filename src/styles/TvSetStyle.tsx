@@ -16,15 +16,13 @@ const TvSetStyle = styled.div`
   filter: drop-shadow(0 3px 6px rgba(0,0,0,0.56));
   transition: transform 0.2s ease;
   position: relative;
-  min-width: 360px;
-  max-width: 80vw;
+  width: 360px;
   animation: ${attentionAnimation} 4s infinite, ${entranceAnimation} 1s 1;
   :hover,
   :active {
     transform: scale(1.02)
   }
   p {
-    /* width: 290px; //canvas width */
     width: min-content;
     text-align: center;
     color: var(--white);

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import dotenv from 'dotenv'
 import { useSelector } from 'react-redux'
 import Show from './Show'
+import { TVShowListStyle } from '../styles'
 
 dotenv.config({ path: '.env' })
 
@@ -34,7 +35,7 @@ export default function TVShowList() {
     />
   ))
 
-  return <>
+  return <TVShowListStyle>
     {shows}
-  </>
+  </TVShowListStyle>
 }

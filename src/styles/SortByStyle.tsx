@@ -4,7 +4,7 @@ const SortByStyle = styled.form`
   max-width: 800px;
   width: 90vw;
   margin: auto;
-  padding: 1.5em;
+  padding: 1em;
   background: var(--light);
   display: flex;
   flex-flow: row wrap;

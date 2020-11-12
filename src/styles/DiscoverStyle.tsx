@@ -7,7 +7,7 @@ const DiscoverStyle = styled.section`
   align-items: center;
   justify-content: space-around;
   color: var(--white);
-  padding: 2em;
+  padding: 0.5em;
   padding-bottom: 5em;
   .discover__title {
     width: 100%;
