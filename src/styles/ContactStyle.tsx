@@ -50,7 +50,7 @@ const ContactStyle = styled.section`
     }
     .contact__validation {
       text-align: center;
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-weight: var(--lightFont);
       color: #5C946E;
       padding: 0.15em;

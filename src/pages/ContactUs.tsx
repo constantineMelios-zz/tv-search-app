@@ -1,15 +1,14 @@
-import React, { useRef, useState } from 'react'
-import { RootStateOrAny, useSelector } from 'react-redux'
+import React, { useEffect, useRef } from 'react'
+import { RootStateOrAny, useSelector, useDispatch } from 'react-redux'
 import { ContactStyle } from '../styles'
 import letter from '../assets/letter.svg'
+import { name, email, message, setValidation, removeValidation } from '../redux/form'
 
 
 export default function ContactUs() {
   const language = useSelector((state: RootStateOrAny) => state.language)
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [validation, setValidation] = useState('')
+  const form = useSelector((state: RootStateOrAny) => state.form)
+  const dispatch = useDispatch()
   const formRef = useRef<HTMLDivElement>(null)
 
   function handleSubmit(event) {
@@ -18,25 +17,26 @@ export default function ContactUs() {
       formRef.current.classList.add('sent')
     }
     setTimeout(() => {
-      setName('')
-      setEmail('')
-      setMessage('')
-      validationMessage()
+      dispatch(name(''))
+      dispatch(email(''))
+      dispatch(message(''))
+      dispatch(setValidation(language))
       if (formRef.current !== null) {
         formRef.current.classList.remove('sent')
       }
     }, 250)
   }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  function validationMessage() {
-    setValidation(() => {
-      if (language === 'en') {
-        return "Your message sent succesfully! Anything else to add?"
-      }
-      return "To μήνυμα σας στάλθηκε με επιτυχία! Θέλετε να μας πείτε κάτι ακόμα;"
-    })
-  }
+  useEffect(() => {
+    dispatch(setValidation(language))
+  }, [language, dispatch])
+
+  useEffect(() => {
+    dispatch(removeValidation())
+    return () => {
+      dispatch(removeValidation())
+    }
+  }, [dispatch])
 
   return (
     <ContactStyle>
@@ -45,7 +45,7 @@ export default function ContactUs() {
           {language === 'en' ? "Contact Us" : "Επικοινωνία"}
         </h1>
         <p className="contact__validation">
-          {validation}
+          {form.validation}
         </p>
         <form className="contact__form" encType="text/plain" onSubmit={handleSubmit}>
           <label htmlFor="name">{language === 'en' ? "Full Name" : "Ονοματεπώνυμο"}</label>
@@ -53,8 +53,8 @@ export default function ContactUs() {
             type="text"
             name="name"
             placeholder={language === 'en' ? "Your name" : "Το όνομα σου"}
-            value={name}
-            onChange={(event) => { setName(event.target.value) }}
+            value={form.name}
+            onChange={(event) => { dispatch(name(event.target.value)) }}
             required
           />
           <label htmlFor="name">Email</label>
@@ -62,16 +62,16 @@ export default function ContactUs() {
             type="email"
             name="email"
             placeholder="example@email.com"
-            value={email}
-            onChange={(event) => { setEmail(event.target.value) }}
+            value={form.email}
+            onChange={(event) => { dispatch(email(event.target.value)) }}
             required
           />
           <label htmlFor="name">{language === 'en' ? "Message" : "Μήνυμα"}</label>
           <textarea
             name="message"
             placeholder={language === 'en' ? "Your message here" : "Το μήνυμα σου"}
-            value={message}
-            onChange={(event) => { setMessage(event.target.value) }}
+            value={form.message}
+            onChange={(event) => { dispatch(message(event.target.value)) }}
             rows={1500}
             required
           />
