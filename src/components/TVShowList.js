@@ -25,15 +25,21 @@ export default function TVShowList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language, sortBy])
 
-  const shows = showsList.map(show => (
-    <Show 
-      name={show.name} 
-      overview={show.overview} 
-      poster={show.poster_path} 
-      vote={show.vote_average}
-      key={show.id}
-    />
-  ))
+  const shows = showsList.map((show, index) => {
+    if (index < 18) {
+      return (
+        <Show 
+          name={show.name} 
+          overview={show.overview} 
+          poster={show.poster_path} 
+          vote={show.vote_average}
+          key={show.id}
+        />
+      )
+    }
+  }
+    
+  )
 
   return <TVShowListStyle>
     {shows}

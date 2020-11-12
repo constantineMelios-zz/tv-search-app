@@ -7,7 +7,7 @@ const entranceAnimation = keyframes`
 
 const TVShowListStyle = styled.div`
   min-width: 350px;
-  max-width: 1250px;
+  max-width: 1000px;
   margin: 1em auto;
   padding: 2em 0;
   display: flex;
@@ -17,6 +17,7 @@ const TVShowListStyle = styled.div`
   background: var(--white);
   border-radius: 2em;
   animation: ${entranceAnimation} 0.5s 1;
+
 `
 
 export default TVShowListStyle
