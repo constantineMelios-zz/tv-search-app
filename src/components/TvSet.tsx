@@ -1,6 +1,7 @@
 import React from 'react'
 import { RootStateOrAny, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import TextSelector from '../helpers/TextSelector'
 import { TvSetStyle } from '../styles'
 import Canvas from './Canvas'
 
@@ -11,7 +12,7 @@ export default function TvSet(props) {
   return (
     <Link to="/discover">
       <TvSetStyle>
-        <p>{language === 'en' ? "CLICK TO FIND" : "ΒΡΕΣ ΤΗΝ ΕΔΩ"}</p>
+        <p>{TextSelector("CLICK TO FIND", "ΒΡΕΣ ΤΗΝ ΕΔΩ", language)}</p>
         <svg viewBox="0 0 464.56 482.45" {...props}>
           <defs>
             <linearGradient

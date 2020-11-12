@@ -3,6 +3,7 @@ import { RootStateOrAny, useSelector, useDispatch } from 'react-redux'
 import { ContactStyle } from '../styles'
 import letter from '../assets/letter.svg'
 import { name, email, message, setValidation, removeValidation } from '../redux/form'
+import TextSelector from '../helpers/TextSelector'
 
 
 export default function ContactUs() {
@@ -42,17 +43,17 @@ export default function ContactUs() {
     <ContactStyle>
       <div className="container" ref={formRef}>
         <h1 className="contact__title">
-          {language === 'en' ? "Contact Us" : "Επικοινωνία"}
+          {TextSelector("Contact Us", "Επικοινωνία", language)}
         </h1>
         <p className="contact__validation">
           {form.validation}
         </p>
         <form className="contact__form" encType="text/plain" onSubmit={handleSubmit}>
-          <label htmlFor="name">{language === 'en' ? "Full Name" : "Ονοματεπώνυμο"}</label>
+          <label htmlFor="name">{TextSelector("Full Name", "Ονοματεπώνυμο", language)}</label>
           <input
             type="text"
             name="name"
-            placeholder={language === 'en' ? "Your name" : "Το όνομα σου"}
+            placeholder={TextSelector("Your name", "Το όνομα σου", language)}
             value={form.name}
             onChange={(event) => { dispatch(name(event.target.value)) }}
             required
@@ -66,17 +67,19 @@ export default function ContactUs() {
             onChange={(event) => { dispatch(email(event.target.value)) }}
             required
           />
-          <label htmlFor="name">{language === 'en' ? "Message" : "Μήνυμα"}</label>
+          <label htmlFor="name">{TextSelector("Message", "Μήνυμα", language)}</label>
           <textarea
             name="message"
-            placeholder={language === 'en' ? "Your message here" : "Το μήνυμα σου"}
+            placeholder={TextSelector("Your message here", "Το μήνυμα σου", language)}
             value={form.message}
             onChange={(event) => { dispatch(message(event.target.value)) }}
             rows={1500}
             required
           />
           <button type="submit" className="contact__btn">
-            <img src={letter} alt={language === 'en' ? "Send Message" : "Στείλε μήνυμα"} aria-label={language === 'en' ? "Send Message" : "Στείλε μήνυμα"} />
+            <img src={letter}
+              alt={TextSelector("Send Message", "Στείλε μήνυμα", language)}
+              aria-label={TextSelector("Send Message", "Στείλε μήνυμα", language)} />
           </button>
         </form>
       </div>

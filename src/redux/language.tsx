@@ -10,12 +10,12 @@ export function english() {
   }
 }
 
-function languageReducer(language = "en", action) {
+function languageReducer(language = "en-US", action) {
   switch (action.type) {
     case "GREEK":
-      return "el"
+      return "el-GR"
     case "ENGLISH":
-      return "en"
+      return "en-US"
     default:
       return language
   }

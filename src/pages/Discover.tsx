@@ -1,13 +1,17 @@
 import React from 'react'
 import { DiscoverStyle } from '../styles'
-import dotenv from 'dotenv'
-
-dotenv.config({ path: '.env' })
+import { RootStateOrAny, useSelector } from 'react-redux'
+import TextSelector from '../helpers/TextSelector'
+import { SortBy, TVShowList } from '../components'
 
 
 export default function Discover() {
-  console.log(process.env.REACT_APP_API_KEY)
+  const language = useSelector((state: RootStateOrAny) => state.language)
   return <DiscoverStyle>
-
+    <h1>
+      {TextSelector('Top TV Shows', 'Κορυφαίες Τηλεοπτικές Σειρές', language)}
+    </h1>
+    <SortBy />
+    <TVShowList />
   </DiscoverStyle>
 }
