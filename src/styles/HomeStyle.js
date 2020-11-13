@@ -12,9 +12,9 @@ const textAnimation = keyframes`
 `
 
 const HomeStyle = styled.main`
-  width: 100vw;
-  height: 100vh;
-  padding: 1em;
+  height: 100%;
+  width: 100%;
+  padding: 0 1em;
   background: url(${background});
   background-repeat: no-repeat;
   background-size: contain;

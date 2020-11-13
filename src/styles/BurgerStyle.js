@@ -22,7 +22,7 @@ const iconAnimation = keyframes`
 
 const BurgerStyle = styled.div`
   cursor: pointer;
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
   width: 60px;
