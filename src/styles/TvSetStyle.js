@@ -26,7 +26,7 @@ const TvSetStyle = styled.div`
     width: min-content;
     text-align: center;
     color: var(--white);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: var(--boldFont);
     position: absolute;
     top: 35%;
