@@ -9,18 +9,18 @@ import Canvas from './Canvas'
 export default function TvSet(props) {
   const language = useSelector((state) => state.language)
 
-  function iOS() {
-    return [
-      'iPad Simulator',
-      'iPhone Simulator',
-      'iPod Simulator',
-      'iPad',
-      'iPhone',
-      'iPod'
-    ].includes(navigator.platform)
-    // iPad on iOS 13 detection
-    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
-  }
+  // function iOS() {
+  //   return [
+  //     'iPad Simulator',
+  //     'iPhone Simulator',
+  //     'iPod Simulator',
+  //     'iPad',
+  //     'iPhone',
+  //     'iPod'
+  //   ].includes(navigator.platform)
+  //   // iPad on iOS 13 detection
+  //   || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+  // }
 
   return (
     <Link to='/discover'>
@@ -490,7 +490,8 @@ export default function TvSet(props) {
               id='prefix__screen'
             />
             <foreignObject x='40' y='150' width='290' height='230' rx='71'>
-              {iOS ? '' : <Canvas />}
+              {/* {iOS ? '' : <Canvas />} */}
+              <Canvas />
             </foreignObject>
           </g>
         </svg>

@@ -32,6 +32,7 @@ const HomeStyle = styled.main`
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
+    padding: 1em;
     color: var(--white);
   }
   .main__titles {

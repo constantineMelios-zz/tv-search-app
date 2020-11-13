@@ -79,7 +79,7 @@ export default function Canvas() {
 
 
   return (
-    <CanvasStyle ref={canvasRef} width={290} height={230}>
+    <CanvasStyle ref={canvasRef}>
     </CanvasStyle>
   )
 }
