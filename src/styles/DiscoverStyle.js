@@ -7,6 +7,7 @@ const entranceAnimation = keyframes`
 
 const DiscoverStyle = styled.section`
   height: 100%;
+  margin: auto;
   display: flex;
   flex-flow: column;
   align-items: center;

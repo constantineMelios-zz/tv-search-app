@@ -20,7 +20,7 @@ const formExitAnimation = keyframes`
 
 const ContactStyle = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   display: flex;
   align-items: center;
