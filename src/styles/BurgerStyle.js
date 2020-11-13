@@ -33,7 +33,7 @@ const BurgerStyle = styled.div`
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
   transition: width 0.25s ease-out, height 0.25s ease-out, border-bottom-right-radius 0.4s, box-shadow 0.25s ease;
   animation: ${entranceAnimation} 1s 1;
-  z-index: 1;
+  z-index: 100;
   :hover {
     box-shadow: none;
   }
