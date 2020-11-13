@@ -13,7 +13,9 @@ const textAnimation = keyframes`
 
 const HomeStyle = styled.main`
   height: 100%;
+  max-height: 100vh;
   width: 100%;
+  max-width: 100vw;
   margin: auto;
   background: url(${background});
   background-repeat: no-repeat;
