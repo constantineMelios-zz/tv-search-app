@@ -41,14 +41,14 @@ const HomeStyle = styled.main`
       text-align: center;
     }
     .main__title {
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: var(--boldFont);
       line-height: 1.15em;
       animation: ${textAnimation} 1s 1;
     }
     .main__subtitle {
       margin-top: 0.5em;
-      font-size: 1.25rem;
+      font-size: 1.05rem;
       font-weight: var(--lightFont);
       line-height: 1.15em;
       animation: ${textAnimation} 1.2s 1;

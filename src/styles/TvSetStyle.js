@@ -16,7 +16,7 @@ const TvSetStyle = styled.div`
   filter: drop-shadow(0 3px 6px rgba(0,0,0,0.56));
   transition: transform 0.2s ease;
   position: relative;
-  width: 360px;
+  width: 340px;
   animation: ${attentionAnimation} 4s infinite, ${entranceAnimation} 1s 1;
   :hover,
   :active {
@@ -26,7 +26,7 @@ const TvSetStyle = styled.div`
     width: min-content;
     text-align: center;
     color: var(--white);
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: var(--boldFont);
     position: absolute;
     top: 35%;
