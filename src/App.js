@@ -17,13 +17,12 @@ function App() {
         </Route>
         <Route path='/discover'>
           <Discover />
-          <Footer />
         </Route>
         <Route path='/contact'>
           <ContactUs />
-          <Footer />
         </Route>
       </Switch>
+      <Footer />
     </>
   )
 

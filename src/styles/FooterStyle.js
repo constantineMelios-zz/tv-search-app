@@ -6,12 +6,12 @@ const FooterStyle = styled.footer`
   margin: -3em auto;
   padding: 0.5em;
   text-align: center;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   color: var(--white);
   a {
     color: inherit;
     text-decoration: none;
-    margin-right: 1em;
+    margin-right: 0.1em;
   }
 `
 

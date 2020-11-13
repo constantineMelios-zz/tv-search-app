@@ -12,11 +12,9 @@ const textAnimation = keyframes`
 `
 
 const HomeStyle = styled.main`
-  height: 100%;
-  max-height: 100vh;
-  width: 100%;
-  max-width: 100vw;
-  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  padding: 1em;
   background: url(${background});
   background-repeat: no-repeat;
   background-size: contain;
@@ -43,14 +41,14 @@ const HomeStyle = styled.main`
       text-align: center;
     }
     .main__title {
-      font-size: 2.5rem;
+      font-size: 3rem;
       font-weight: var(--boldFont);
       line-height: 1.15em;
       animation: ${textAnimation} 1s 1;
     }
     .main__subtitle {
       margin-top: 0.5em;
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       font-weight: var(--lightFont);
       line-height: 1.15em;
       animation: ${textAnimation} 1.2s 1;
